@@ -2,8 +2,11 @@ import React from 'react';
 import MovieCard from '../movie-card/movie-card.jsx';
 import PropTypes from 'prop-types';
 
-const PageMain = (props) => {
-  const {movieNames} = props;
+const MainPage = (props) => {
+  const {
+    movieNames,
+    onClick
+  } = props;
 
   return (
     <React.Fragment>
@@ -130,7 +133,7 @@ const PageMain = (props) => {
           </ul>
 
           <div className="catalog__movies-list">
-            {movieNames.map((it, i) => <MovieCard key={i} movieName={it} />)}
+            {movieNames.map((it, i) => <MovieCard onClick={onClick} key={i} movieName={it} />)}
           </div>
 
           <div className="catalog__more">
@@ -156,9 +159,10 @@ const PageMain = (props) => {
   );
 };
 
-PageMain.propTypes = {
-  movieNames: PropTypes.string
+MainPage.propTypes = {
+  movieNames: PropTypes.array,
+  onClick: PropTypes.func
 };
 
-export default PageMain;
+export default MainPage;
 
