@@ -8,7 +8,16 @@ Enzyme.configure({adapter: new Adapter()});
 it(`Simulate event in MainPage`, () => {
   const clickHandler = jest.fn();
   const main = shallow(<MainPage
-    movieNames={[`Thanos`, `Loki`, `Thor`]}
+    movieNames={
+      [{
+        filmName: `Fantastic Beasts: The Crimes of Grindelwald`,
+        src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+      },
+      {
+        filmName: `Bohemian Rhapsody`,
+        src: `img/bohemian-rhapsody.jpg`
+      }]
+    }
     onClick={clickHandler}
   />);
 

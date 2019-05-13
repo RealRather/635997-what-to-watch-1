@@ -8,7 +8,12 @@ Enzyme.configure({adapter: new Adapter()});
 it(`Simulate click event in MovieCard`, () =>{
   const clickHandler = jest.fn();
   const movie = shallow(<MovieCard
-    movieName={`Thanos`}
+    movieName={
+      {
+        filmName: `Fantastic Beasts: The Crimes of Grindelwald`,
+        src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+      }
+    }
     onClick = {clickHandler}
   />);
 

@@ -6,7 +6,16 @@ it(`Render MainPage`, () => {
   const clickHandler = jest.fn();
   const tree = renderer
     .create(<MainPage
-      movieNames={[`Thanos`, `Loki`, `Thor`]}
+      movieNames={
+        [{
+          filmName: `Fantastic Beasts: The Crimes of Grindelwald`,
+          src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+        },
+        {
+          filmName: `Bohemian Rhapsody`,
+          src: `img/bohemian-rhapsody.jpg`
+        }]
+      }
       onClick={clickHandler}
     />)
     .toJSON();

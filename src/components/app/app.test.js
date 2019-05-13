@@ -6,7 +6,16 @@ it(`Render App`, () => {
   const clickHandler = jest.fn();
   const tree = renderer
     .create(<App
-      moviesCardsNames={[`Thanos`, `Loki`, `Thor`]}
+      moviesCardsNames={
+        [{
+          filmName: `Fantastic Beasts: The Crimes of Grindelwald`,
+          src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+        },
+        {
+          filmName: `Bohemian Rhapsody`,
+          src: `img/bohemian-rhapsody.jpg`
+        }]
+      }
       onClick = {clickHandler}
     />)
     .toJSON();

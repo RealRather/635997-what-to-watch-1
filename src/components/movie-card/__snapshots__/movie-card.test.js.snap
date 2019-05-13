@@ -28,7 +28,7 @@ exports[`Render MovieCard 1`] = `
       className="small-movie-card__link"
       href="movie-page.html"
     >
-      Thanos
+      Fantastic Beasts: The Crimes of Grindelwald
     </a>
   </h3>
 </article>

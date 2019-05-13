@@ -1,20 +1,29 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import MainPage from '../main-page/main-page.jsx';
 import PropTypes from 'prop-types';
 
-const App = (props) => {
-  const {
-    moviesCardsNames,
-    onClick
-  } = props;
-  return <MainPage
-    movieNames = {moviesCardsNames}
-    onClick={onClick}
-  />;
-};
+class App extends PureComponent {
+  constructor() {
+    super();
+  }
+  render() {
+    const {
+      moviesCardsNames,
+      onClick
+    } = this.props;
+
+    return <MainPage
+      movieNames = {moviesCardsNames}
+      onClick={onClick}
+    />;
+  }
+}
 
 App.propTypes = {
-  moviesCardsNames: PropTypes.array,
+  moviesCardsNames: PropTypes.arrayOf(PropTypes.shape({
+    filmName: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired
+  })),
   onClick: PropTypes.func
 };
 
