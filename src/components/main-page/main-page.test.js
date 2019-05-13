@@ -8,12 +8,20 @@ it(`Render MainPage`, () => {
     .create(<MainPage
       movieNames={
         [{
-          filmName: `Fantastic Beasts: The Crimes of Grindelwald`,
-          src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+          filmName: `Fantastic`,
+          src: `img/fantastic.jpg`
         },
         {
-          filmName: `Bohemian Rhapsody`,
-          src: `img/bohemian-rhapsody.jpg`
+          filmName: `Bohemian`,
+          src: `img/bohemian.jpg`
+        },
+        {
+          filmName: `Macbeth`,
+          src: `img/macbeth.jpg`
+        },
+        {
+          filmName: `We need to`,
+          src: `img/we-need-to.jpg`
         }]
       }
       onClick={clickHandler}

@@ -10,8 +10,8 @@ it(`Simulate click event in MovieCard`, () =>{
   const movie = shallow(<MovieCard
     movieName={
       {
-        filmName: `Fantastic Beasts: The Crimes of Grindelwald`,
-        src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+        filmName: `Bohemian`,
+        src: `img/bohemian.jpg`
       }
     }
     onClick = {clickHandler}

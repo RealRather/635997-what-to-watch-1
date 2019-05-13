@@ -389,9 +389,9 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Fantastic"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/fantastic.jpg"
               width="280"
             />
           </div>
@@ -403,7 +403,7 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Fantastic Beasts: The Crimes of Grindelwald
+              Fantastic
             </a>
           </h3>
         </article>
@@ -420,9 +420,9 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Bohemian Rhapsody"
+              alt="Bohemian"
               height="175"
-              src="img/bohemian-rhapsody.jpg"
+              src="img/bohemian.jpg"
               width="280"
             />
           </div>
@@ -434,7 +434,69 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Bohemian Rhapsody
+              Bohemian
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+        >
+          <button
+            className="small-movie-card__play-btn"
+            type="button"
+          >
+            Play
+          </button>
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt="Macbeth"
+              height="175"
+              src="img/macbeth.jpg"
+              width="280"
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+            onClick={[MockFunction]}
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+            >
+              Macbeth
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+        >
+          <button
+            className="small-movie-card__play-btn"
+            type="button"
+          >
+            Play
+          </button>
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt="We need to"
+              height="175"
+              src="img/we-need-to.jpg"
+              width="280"
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+            onClick={[MockFunction]}
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+            >
+              We need to
             </a>
           </h3>
         </article>

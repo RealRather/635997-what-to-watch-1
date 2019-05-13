@@ -1,21 +1,29 @@
 import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
+import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import App from './app.jsx';
 
-Enzyme.configure({adapter: new Adapter()});
+configure({adapter: new Adapter()});
 
 it(`Simulate event in App`, () => {
   const clickHandler = jest.fn();
   const app = shallow(<App
     moviesCardsNames={
       [{
-        filmName: `Fantastic Beasts: The Crimes of Grindelwald`,
-        src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+        filmName: `Fantastic`,
+        src: `img/fantastic.jpg`
       },
       {
-        filmName: `Bohemian Rhapsody`,
-        src: `img/bohemian-rhapsody.jpg`
+        filmName: `Bohemian`,
+        src: `img/bohemian.jpg`
+      },
+      {
+        filmName: `Macbeth`,
+        src: `img/macbeth.jpg`
+      },
+      {
+        filmName: `We need to`,
+        src: `img/we-need-to.jpg`
       }]
     }
     onClick={clickHandler}
