@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 import MovieCard from '../movie-card/movie-card.jsx';
 
 class MoviesList extends PureComponent {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
   render() {
     const {
       movieNames,
       onClick
     } = this.props;
-
     return movieNames.map((it, i) => <MovieCard
       onClick={onClick} key={i} movieName={it}
     />);

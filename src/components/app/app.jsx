@@ -3,15 +3,14 @@ import MainPage from '../main-page/main-page.jsx';
 import PropTypes from 'prop-types';
 
 class App extends PureComponent {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
   render() {
     const {
       moviesCardsNames,
       onClick
     } = this.props;
-
     return <MainPage
       movieNames = {moviesCardsNames}
       onClick={onClick}
