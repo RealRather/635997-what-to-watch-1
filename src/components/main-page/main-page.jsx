@@ -6,7 +6,6 @@ class MainPage extends PureComponent {
   constructor(props) {
     super(props);
   }
-
   render() {
     const {
       movieNames,
