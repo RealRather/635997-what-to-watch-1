@@ -1,23 +1,28 @@
 const films = [
   {
-    filmName: `Fantastic Beasts: The Crimes of Grindelwald`,
+    id: `1`,
+    name: `Fantastic Beasts: The Crimes of Grindelwald`,
     src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
   },
   {
-    filmName: `Bohemian Rhapsody`,
+    id: `2`,
+    name: `Bohemian Rhapsody`,
     src: `img/bohemian-rhapsody.jpg`
   },
   {
-    filmName: `Macbeth`,
+    id: `3`,
+    name: `Macbeth`,
     src: `img/macbeth.jpg`
   },
   {
-    filmName: `We need to talk about Kevin`,
+    id: `4`,
+    name: `We need to talk about Kevin`,
     src: `img/we-need-to-talk-about-kevin.jpg`
 
   },
   {
-    filmName: `Johnny English`,
+    id: `5`,
+    name: `Johnny English`,
     src: `img/johnny-english.jpg`
   }
 ];

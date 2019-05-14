@@ -5,6 +5,13 @@ import MoviesList from '../movies-list/movies-list.jsx';
 class MainPage extends PureComponent {
   constructor(props) {
     super(props);
+    this.state = {isFocus: false};
+    this._onFocusHandler = this._onFocusHandler.bind(this);
+  }
+  _onFocusHandler() {
+    this.setState((currentState) => ({
+      isFocus: !currentState.isFocus
+    }));
   }
   render() {
     const {
@@ -135,7 +142,7 @@ class MainPage extends PureComponent {
               </li>
             </ul>
             <div className="catalog__movies-list">
-              <MoviesList onClick={onClick} movieNames={movieNames}/>
+              <MoviesList onClick={onClick} movieNames={movieNames} _onFocusHandler={this._onFocusHandler()}/>
             </div>
             <div className="catalog__more">
               <button className="catalog__button" type="button">Show more</button>
@@ -164,10 +171,12 @@ class MainPage extends PureComponent {
 
 MainPage.propTypes = {
   movieNames: PropTypes.arrayOf(PropTypes.shape({
-    filmName: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired
   })),
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  _onFocusHandler: PropTypes.func
 };
 
 export default MainPage;

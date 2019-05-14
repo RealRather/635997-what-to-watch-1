@@ -2,17 +2,21 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import MovieCard from './movie-card.jsx';
 
+const mock = {
+  id: `22`,
+  name: `Bohemian`,
+  src: `img/bohemian.jpg`
+};
+
 it(`Render MovieCard`, () => {
-  const clickHandler = jest.fn();
+  const {movieName} = mock;
+  const onClickHandler = jest.fn();
+  const onFocusHandler = jest.fn();
   const tree = renderer
     .create(<MovieCard
-      movieName={
-        {
-          filmName: `Bohemian`,
-          src: `img/bohemian.jpg`
-        }
-      }
-      onClick={clickHandler}
+      movieName={movieName}
+      onClick={onClickHandler}
+      _onFocusHandler={onFocusHandler}
     />)
     .toJSON();
 
