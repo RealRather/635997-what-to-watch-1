@@ -3,7 +3,6 @@
 exports[`Render MovieCard 1`] = `
 <article
   className="small-movie-card catalog__movies-card"
-  id="undefined"
   onFocus={[MockFunction]}
 >
   <button
@@ -16,7 +15,7 @@ exports[`Render MovieCard 1`] = `
     className="small-movie-card__image"
   >
     <img
-      alt="undefined"
+      alt="Bohemian"
       height="175"
       src="img/bohemian.jpg"
       width="280"
@@ -29,7 +28,9 @@ exports[`Render MovieCard 1`] = `
     <a
       className="small-movie-card__link"
       href="movie-page.html"
-    />
+    >
+      Bohemian
+    </a>
   </h3>
 </article>
 `;

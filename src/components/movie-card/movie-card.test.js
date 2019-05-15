@@ -9,7 +9,7 @@ const mock = {
 };
 
 it(`Render MovieCard`, () => {
-  const {movieName} = mock;
+  const movieName = mock;
   const onClickHandler = jest.fn();
   const onFocusHandler = jest.fn();
   const tree = renderer

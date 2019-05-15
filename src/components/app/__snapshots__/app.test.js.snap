@@ -378,7 +378,7 @@ Array [
       >
         <article
           className="small-movie-card catalog__movies-card"
-          id="undefined"
+          onFocus={[Function]}
         >
           <button
             className="small-movie-card__play-btn"
@@ -390,7 +390,7 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="undefined"
+              alt="Fantastic"
               height="175"
               src="img/fantastic.jpg"
               width="280"
@@ -403,12 +403,14 @@ Array [
             <a
               className="small-movie-card__link"
               href="movie-page.html"
-            />
+            >
+              Fantastic
+            </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
-          id="undefined"
+          onFocus={[Function]}
         >
           <button
             className="small-movie-card__play-btn"
@@ -420,7 +422,7 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="undefined"
+              alt="Bohemian"
               height="175"
               src="img/bohemian.jpg"
               width="280"
@@ -433,12 +435,14 @@ Array [
             <a
               className="small-movie-card__link"
               href="movie-page.html"
-            />
+            >
+              Bohemian
+            </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
-          id="undefined"
+          onFocus={[Function]}
         >
           <button
             className="small-movie-card__play-btn"
@@ -450,7 +454,7 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="undefined"
+              alt="Macbeth"
               height="175"
               src="img/macbeth.jpg"
               width="280"
@@ -463,12 +467,14 @@ Array [
             <a
               className="small-movie-card__link"
               href="movie-page.html"
-            />
+            >
+              Macbeth
+            </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
-          id="undefined"
+          onFocus={[Function]}
         >
           <button
             className="small-movie-card__play-btn"
@@ -480,7 +486,7 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="undefined"
+              alt="We need to"
               height="175"
               src="img/we-need-to.jpg"
               width="280"
@@ -493,7 +499,9 @@ Array [
             <a
               className="small-movie-card__link"
               href="movie-page.html"
-            />
+            >
+              We need to
+            </a>
           </h3>
         </article>
       </div>
