@@ -9,9 +9,9 @@ class MainPage extends PureComponent {
     this._onFocusHandler = this._onFocusHandler.bind(this);
   }
   _onFocusHandler() {
-    this.setState((currentState) => ({
-      isFocus: !currentState.isFocus
-    }));
+    this.setState({
+      isFocus: true
+    });
   }
   render() {
     const {
@@ -142,7 +142,7 @@ class MainPage extends PureComponent {
               </li>
             </ul>
             <div className="catalog__movies-list">
-              <MoviesList onClick={onClick} movieNames={movieNames} _onFocusHandler={this._onFocusHandler()}/>
+              <MoviesList onClick={onClick} movieNames={movieNames} _onFocusHandler={this._onFocusHandler}/>
             </div>
             <div className="catalog__more">
               <button className="catalog__button" type="button">Show more</button>

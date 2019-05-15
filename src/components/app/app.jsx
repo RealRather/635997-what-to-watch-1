@@ -10,9 +10,9 @@ class App extends PureComponent {
   }
 
   _onFocusHandler() {
-    this.setState((currentState) => ({
-      isFocus: !currentState.isFocus
-    }));
+    this.setState({
+      isFocus: true
+    });
   }
   render() {
     const {
