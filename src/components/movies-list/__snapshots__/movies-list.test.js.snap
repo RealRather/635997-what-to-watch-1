@@ -8,6 +8,7 @@ Array [
   >
     <button
       className="small-movie-card__play-btn"
+      onClick={[MockFunction]}
       type="button"
     >
       Play
@@ -40,6 +41,7 @@ Array [
   >
     <button
       className="small-movie-card__play-btn"
+      onClick={[MockFunction]}
       type="button"
     >
       Play
@@ -72,6 +74,7 @@ Array [
   >
     <button
       className="small-movie-card__play-btn"
+      onClick={[MockFunction]}
       type="button"
     >
       Play
@@ -104,6 +107,7 @@ Array [
   >
     <button
       className="small-movie-card__play-btn"
+      onClick={[MockFunction]}
       type="button"
     >
       Play
