@@ -7,7 +7,7 @@ const MovieCard = ((props) => {
     onClick,
     _onFocusHandler
   } = props;
-  return <article className="small-movie-card catalog__movies-card" onFocus={_onFocusHandler} id={`${movieName.id}`}>
+  return <article className="small-movie-card catalog__movies-card" onFocus={_onFocusHandler}>
     <button className="small-movie-card__play-btn" type="button">Play</button>
     <div className="small-movie-card__image">
       <img src={`${movieName.src}`} alt={`${movieName.name}`} width="280" height="175"/>

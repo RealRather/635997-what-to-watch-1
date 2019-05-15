@@ -8,14 +8,14 @@ const MoviesList = ((props) => {
     onClick,
     _onFocusHandler
   } = props;
-  return movieNames.map((it) => <MovieCard onClick={onClick} key={it} movieName={it} _onFocusHandler={_onFocusHandler}/>);
+  return movieNames.map((it, index)=> <MovieCard onClick={onClick} movieName={it} key={index} _onFocusHandler={_onFocusHandler}/>);
 });
 
 MoviesList.propTypes = {
   movieNames: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired
+    src: PropTypes.string.isRequired
   })),
   onClick: PropTypes.func,
   _onFocusHandler: PropTypes.func
