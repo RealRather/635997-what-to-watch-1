@@ -3,7 +3,7 @@
 exports[`Render MovieCard 1`] = `
 <article
   className="small-movie-card catalog__movies-card"
-  onFocus={[MockFunction]}
+  onFocus={[Function]}
 >
   <button
     className="small-movie-card__play-btn"
