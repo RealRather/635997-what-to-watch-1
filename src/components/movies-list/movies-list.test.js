@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import MainPage from './main-page.jsx';
+import MoviesList from './movies-list.jsx';
 
 const mocks = [
   {
@@ -22,15 +22,20 @@ const mocks = [
     id: `44`,
     name: `We need to`,
     src: `img/we-need-to.jpg`
-  }
-];
+  }];
 
-it(`Render MainPage`, () => {
+it(`Render MoviesList`, () => {
+  const clickHandler = jest.fn();
+  const focusHandler = jest.fn();
   const tree = renderer
-    .create(<MainPage
-      moviesCards={mocks}
+    .create(<MoviesList
+      movies={mocks}
+      onClick={clickHandler}
+      onFocus={focusHandler}
     />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();
 });
+
+

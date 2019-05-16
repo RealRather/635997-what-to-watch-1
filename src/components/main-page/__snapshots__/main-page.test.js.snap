@@ -378,9 +378,11 @@ Array [
       >
         <article
           className="small-movie-card catalog__movies-card"
+          onFocus={[Function]}
         >
           <button
             className="small-movie-card__play-btn"
+            onClick={[Function]}
             type="button"
           >
             Play
@@ -389,29 +391,31 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Fantastic"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/fantastic.jpg"
               width="280"
             />
           </div>
           <h3
             className="small-movie-card__title"
-            onClick={[MockFunction]}
+            onClick={[Function]}
           >
             <a
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Thanos
+              Fantastic
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onFocus={[Function]}
         >
           <button
             className="small-movie-card__play-btn"
+            onClick={[Function]}
             type="button"
           >
             Play
@@ -420,29 +424,31 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Bohemian"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/bohemian.jpg"
               width="280"
             />
           </div>
           <h3
             className="small-movie-card__title"
-            onClick={[MockFunction]}
+            onClick={[Function]}
           >
             <a
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Loki
+              Bohemian
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onFocus={[Function]}
         >
           <button
             className="small-movie-card__play-btn"
+            onClick={[Function]}
             type="button"
           >
             Play
@@ -451,21 +457,54 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Macbeth"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/macbeth.jpg"
               width="280"
             />
           </div>
           <h3
             className="small-movie-card__title"
-            onClick={[MockFunction]}
+            onClick={[Function]}
           >
             <a
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Thor
+              Macbeth
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+          onFocus={[Function]}
+        >
+          <button
+            className="small-movie-card__play-btn"
+            onClick={[Function]}
+            type="button"
+          >
+            Play
+          </button>
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt="We need to"
+              height="175"
+              src="img/we-need-to.jpg"
+              width="280"
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+            onClick={[Function]}
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+            >
+              We need to
             </a>
           </h3>
         </article>

@@ -3,19 +3,18 @@ import MainPage from '../main-page/main-page.jsx';
 import PropTypes from 'prop-types';
 
 const App = (props) => {
-  const {
-    moviesCardsNames,
-    onClick
-  } = props;
+  const {moviesCards} = props;
   return <MainPage
-    movieNames = {moviesCardsNames}
-    onClick={onClick}
+    moviesCards= {moviesCards}
   />;
 };
 
 App.propTypes = {
-  moviesCardsNames: PropTypes.array,
-  onClick: PropTypes.func
+  moviesCards: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired
+  }))
 };
 
 export default App;
