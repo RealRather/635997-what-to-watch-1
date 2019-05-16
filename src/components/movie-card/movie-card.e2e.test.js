@@ -16,11 +16,12 @@ it(`Simulate click event in MovieCard`, () =>{
   const movie = shallow(<MovieCard
     movieName={movieName}
     onClick = {clickHandler}
+    onFocus={clickHandler}
   />);
   const cardTitle = movie.find(`.small-movie-card__title`);
   const playButton = movie.find(`.small-movie-card__play-btn`);
   cardTitle.simulate(`click`, {preventDefault() {}});
   expect(clickHandler).toHaveBeenCalledTimes(1);
-  playButton.simulate(`click`, {targetInst: movieName.id});
-  expect(clickHandler).toHaveBeenCalledWith({targetInst: movieName.id});
+  playButton.simulate(`click`, {preventDefault() {}});
+  expect(clickHandler).toHaveBeenCalledWith(mock.id);
 });

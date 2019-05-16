@@ -27,13 +27,9 @@ const mocks = [
 
 it(`Render App`, () => {
   const moviesCardsNames = mocks;
-  const onClickHandler = jest.fn();
-  const onFocusHandler = jest.fn();
   const tree = renderer
     .create(<App
       moviesCardsNames= {moviesCardsNames}
-      onClick = {onClickHandler}
-      _onFocusHandler={onFocusHandler}
     />)
     .toJSON();
 

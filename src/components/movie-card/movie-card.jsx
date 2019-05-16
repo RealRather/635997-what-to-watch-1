@@ -5,14 +5,16 @@ const MovieCard = ((props) => {
   const {
     movieName,
     onClick,
-    _onFocusHandler
+    onFocus
   } = props;
-  return <article className="small-movie-card catalog__movies-card" onFocus={_onFocusHandler}>
-    <button className="small-movie-card__play-btn" type="button" onClick={onClick}>Play</button>
+  return <article className="small-movie-card catalog__movies-card" onFocus={onFocus}>
+    <button className="small-movie-card__play-btn" type="button" onClick={()=>onClick(movieName.id)}>Play</button>
     <div className="small-movie-card__image">
       <img src={`${movieName.src}`} alt={`${movieName.name}`} width="280" height="175"/>
     </div>
-    <h3 className="small-movie-card__title" onClick={onClick}>
+    <h3 className="small-movie-card__title" onClick={() => {
+      onClick(movieName.id);
+    }}>
       <a className="small-movie-card__link" href="movie-page.html">{movieName.name}</a>
     </h3>
   </article>;
@@ -24,8 +26,8 @@ MovieCard.propTypes = {
     name: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired
   }),
-  onClick: PropTypes.func,
-  _onFocusHandler: PropTypes.func
+  onClick: PropTypes.func.isRequired,
+  onFocus: PropTypes.func.isRequired
 };
 
 export default MovieCard;

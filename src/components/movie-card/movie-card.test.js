@@ -10,13 +10,13 @@ const mock = {
 
 it(`Render MovieCard`, () => {
   const movieName = mock;
-  const onClickHandler = jest.fn();
-  const onFocusHandler = jest.fn();
+  const clickHandler = jest.fn();
+  const focusHandler = jest.fn();
   const tree = renderer
     .create(<MovieCard
       movieName={movieName}
-      onClick={onClickHandler}
-      _onFocusHandler={onFocusHandler}
+      onClick={clickHandler}
+      onFocus={focusHandler}
     />)
     .toJSON();
 

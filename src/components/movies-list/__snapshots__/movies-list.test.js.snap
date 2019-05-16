@@ -8,7 +8,7 @@ Array [
   >
     <button
       className="small-movie-card__play-btn"
-      onClick={[MockFunction]}
+      onClick={[Function]}
       type="button"
     >
       Play
@@ -25,7 +25,7 @@ Array [
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[MockFunction]}
+      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
@@ -41,7 +41,7 @@ Array [
   >
     <button
       className="small-movie-card__play-btn"
-      onClick={[MockFunction]}
+      onClick={[Function]}
       type="button"
     >
       Play
@@ -58,7 +58,7 @@ Array [
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[MockFunction]}
+      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
@@ -74,7 +74,7 @@ Array [
   >
     <button
       className="small-movie-card__play-btn"
-      onClick={[MockFunction]}
+      onClick={[Function]}
       type="button"
     >
       Play
@@ -91,7 +91,7 @@ Array [
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[MockFunction]}
+      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
@@ -107,7 +107,7 @@ Array [
   >
     <button
       className="small-movie-card__play-btn"
-      onClick={[MockFunction]}
+      onClick={[Function]}
       type="button"
     >
       Play
@@ -124,7 +124,7 @@ Array [
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[MockFunction]}
+      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"

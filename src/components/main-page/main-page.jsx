@@ -6,18 +6,21 @@ class MainPage extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {isFocus: false};
-    this._onFocusHandler = this._onFocusHandler.bind(this);
+    this.focusHandler = this.focusHandler.bind(this);
   }
-  _onFocusHandler() {
-    this.setState({
+
+  focusHandler() {
+    return this.setState({
       isFocus: true
     });
   }
+
+  clickHandler(id) {
+    return id;
+  }
+
   render() {
-    const {
-      movieNames,
-      onClick
-    } = this.props;
+    const {movieNames} = this.props;
     return (
       <React.Fragment>
         <div className="visually-hidden">
@@ -142,7 +145,7 @@ class MainPage extends PureComponent {
               </li>
             </ul>
             <div className="catalog__movies-list">
-              <MoviesList onClick={onClick} movieNames={movieNames} _onFocusHandler={this._onFocusHandler}/>
+              <MoviesList onClick={this.clickHandler} movieNames={movieNames} onFocus={this.focusHandler}/>
             </div>
             <div className="catalog__more">
               <button className="catalog__button" type="button">Show more</button>
@@ -174,9 +177,7 @@ MainPage.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired
-  })),
-  onClick: PropTypes.func,
-  _onFocusHandler: PropTypes.func
+  }))
 };
 
 export default MainPage;
