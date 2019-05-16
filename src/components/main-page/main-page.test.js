@@ -26,10 +26,9 @@ const mocks = [
 ];
 
 it(`Render MainPage`, () => {
-  const movieNames = mocks;
   const tree = renderer
     .create(<MainPage
-      movieNames={movieNames}
+      moviesCards={mocks}
     />)
     .toJSON();
 

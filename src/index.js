@@ -6,7 +6,7 @@ import films from './mocks/films.js';
 const init = (movies) => {
   ReactDOM.render(
       <App
-        moviesCardsNames = {movies}
+        moviesCards= {movies}
       />,
       document.querySelector(`#root`)
   );

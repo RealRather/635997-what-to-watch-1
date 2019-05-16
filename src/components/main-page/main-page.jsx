@@ -20,7 +20,7 @@ class MainPage extends PureComponent {
   }
 
   render() {
-    const {movieNames} = this.props;
+    const {moviesCards} = this.props;
     return (
       <React.Fragment>
         <div className="visually-hidden">
@@ -145,7 +145,7 @@ class MainPage extends PureComponent {
               </li>
             </ul>
             <div className="catalog__movies-list">
-              <MoviesList onClick={this.clickHandler} movieNames={movieNames} onFocus={this.focusHandler}/>
+              <MoviesList onClick={this.clickHandler} movies={moviesCards} onFocus={this.focusHandler}/>
             </div>
             <div className="catalog__more">
               <button className="catalog__button" type="button">Show more</button>
@@ -173,7 +173,7 @@ class MainPage extends PureComponent {
 
 
 MainPage.propTypes = {
-  movieNames: PropTypes.arrayOf(PropTypes.shape({
+  moviesCards: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired

@@ -25,12 +25,11 @@ const mocks = [
   }];
 
 it(`Render MoviesList`, () => {
-  const movieNames = mocks;
   const clickHandler = jest.fn();
   const focusHandler = jest.fn();
   const tree = renderer
     .create(<MoviesList
-      movieNames={movieNames}
+      movies={mocks}
       onClick={clickHandler}
       onFocus={focusHandler}
     />)

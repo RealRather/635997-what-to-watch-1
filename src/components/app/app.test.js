@@ -26,10 +26,9 @@ const mocks = [
 ];
 
 it(`Render App`, () => {
-  const moviesCardsNames = mocks;
   const tree = renderer
     .create(<App
-      moviesCardsNames= {moviesCardsNames}
+      moviesCards={mocks}
     />)
     .toJSON();
 

@@ -11,10 +11,9 @@ const mock = {
 };
 
 it(`Simulate click event in MovieCard`, () =>{
-  const movieName = mock;
   const clickHandler = jest.fn();
   const movie = shallow(<MovieCard
-    movieName={movieName}
+    movie={mock}
     onClick = {clickHandler}
     onFocus={clickHandler}
   />);
