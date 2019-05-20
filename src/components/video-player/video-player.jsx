@@ -13,10 +13,12 @@ const VideoPlayer = ((props) => {
     }
     return sourceTypes;
   });
-  return <video width="280" height="175" poster={`${movie.src}`} muted={true}>
-    {getSourceTags(movie.preview)}
-    {`${movie.name}`}
-  </video>;
+  return <React.Fragment>
+    <video width="280" height="175" poster={`${movie.src}`} muted={true}>
+      {getSourceTags(movie.preview)}
+      {`${movie.name}`}
+    </video>
+  </React.Fragment>;
 });
 
 VideoPlayer.propTypes = {
