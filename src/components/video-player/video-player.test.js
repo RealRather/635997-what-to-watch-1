@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import MovieCard from './movie-card.jsx';
+import VideoPlayer from './video-player.jsx';
 
 const mock = {
   id: `22`,
@@ -12,11 +12,11 @@ const mock = {
   },
 };
 
-it(`Render MovieCard`, () => {
+it(`Render VideoPlayer`, () => {
   const clickHandler = jest.fn();
   const focusHandler = jest.fn();
   const tree = renderer
-    .create(<MovieCard
+    .create(<VideoPlayer
       movie={mock}
       onClick={clickHandler}
       onFocus={focusHandler}
