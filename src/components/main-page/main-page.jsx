@@ -176,7 +176,11 @@ MainPage.propTypes = {
   moviesCards: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired
+    src: PropTypes.string.isRequired,
+    preview: PropTypes.shape({
+      mp4: PropTypes.string.isRequired,
+      webm: PropTypes.string.isRequired
+    }),
   }))
 };
 
