@@ -1,25 +1,87 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-const VideoPlayer = ((props) => {
-  const {
-    movie
-  } = props;
+class VideoPlayer extends PureComponent {
+  constructor(props) {
+    super(props);
 
-  const getSourceTags = ((preview) => {
+    this._videoRef = React.createRef();
+
+    this.state = {
+      progress: 0,
+      isLoading: true,
+      isVideoPlaying: props.isVideoPlaying,
+    };
+
+    this._getSourceTags = this._getSourceTags.bind(this);
+  }
+
+  render() {
+    const {movie} = this.props;
+    const {isLoading} = this.state;
+
+    return <React.Fragment>
+      <video
+        width="280"
+        height="175"
+        poster={`${movie.src}`}
+        muted={true}
+        ref={this._videoRef}
+        disabled={isLoading}
+      >
+        {this._getSourceTags(movie.preview)}
+        {`${movie.name}`}
+      </video>
+    </React.Fragment>;
+  }
+
+  componentDidMount() {
+    const preview = this._videoRef.current;
+
+    preview.oncanplaythrough = () => this.setState({
+      isLoading: false
+    });
+
+    preview.onplay = () => this.setState({
+      isVideoPlaying: true
+    });
+
+    preview.onpause = () => this.setState({
+      isVideoPlaying: false
+    });
+
+    preview.ontimeupdate = () => this.setState({
+      progress: preview.currentTime
+    });
+  }
+
+  componentDidUpdate() {
+    const preview = this._videoRef.current;
+
+    if (this.props.isVideoPlaying) {
+      preview.play();
+    } else {
+      preview.pause();
+    }
+  }
+
+  componentWillUnmount() {
+    const preview = this._videoRef.current;
+
+    preview.oncanplaythrough = null;
+    preview.onplay = null;
+    preview.onpause = null;
+    preview.ontimeupdate = null;
+    preview.src = ``;
+  }
+  _getSourceTags(preview) {
     let sourceTypes = [];
     for (const [key, value] of Object.entries(preview)) {
       sourceTypes.push(<source key={key} src={value} type={`video/${key}`}></source>);
     }
     return sourceTypes;
-  });
-  return <React.Fragment>
-    <video width="280" height="175" poster={`${movie.src}`} muted={true}>
-      {getSourceTags(movie.preview)}
-      {`${movie.name}`}
-    </video>
-  </React.Fragment>;
-});
+  }
+}
 
 VideoPlayer.propTypes = {
   movie: PropTypes.shape({
@@ -30,7 +92,8 @@ VideoPlayer.propTypes = {
       mp4: PropTypes.string.isRequired,
       webm: PropTypes.string.isRequired
     }),
-  })
+  }),
+  isVideoPlaying: PropTypes.bool.isRequired
 };
 
 export default VideoPlayer;

@@ -15,13 +15,15 @@ const mock = {
 };
 
 it(`Simulate click event in MovieCard`, () =>{
-  const clickHandler = jest.fn();
+  const handler = jest.fn();
   const movie = shallow(<MovieCard
     movie={mock}
-    onClick = {clickHandler}
-    onFocus={clickHandler}
+    isVideoPlaying={false}
+    clickHandler={handler}
+    focusHandler={handler}
+    leaveHandler={handler}
   />);
-  const cardTitle = movie.find(`.small-movie-card__title`);
-  cardTitle.simulate(`click`, {preventDefault() {}});
-  expect(clickHandler).toHaveBeenCalledTimes(1);
+  const cardTitle = movie.find(`.small-movie-card`);
+  cardTitle.simulate(`pointerEnter`, {preventDefault() {}});
+  expect(handler).toHaveBeenCalledTimes(1);
 });
