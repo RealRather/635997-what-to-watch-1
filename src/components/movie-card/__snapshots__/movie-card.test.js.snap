@@ -3,25 +3,25 @@
 exports[`Render MovieCard 1`] = `
 <article
   className="small-movie-card catalog__movies-card"
-  onFocus={[Function]}
+  onPointerEnter={[Function]}
+  onPointerLeave={[Function]}
 >
-  <button
-    className="small-movie-card__play-btn"
-    onClick={[Function]}
-    type="button"
+  <video
+    height="175"
+    muted={true}
+    poster="img/bohemian.jpg"
+    width="280"
   >
-    Play
-  </button>
-  <div
-    className="small-movie-card__image"
-  >
-    <img
-      alt="Bohemian"
-      height="175"
-      src="img/bohemian.jpg"
-      width="280"
+    <source
+      src="https://download.trailer-480p.mp4"
+      type="video/mp4"
     />
-  </div>
+    <source
+      src="https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+      type="video/webm"
+    />
+    Bohemian
+  </video>
   <h3
     className="small-movie-card__title"
     onClick={[Function]}

@@ -378,25 +378,25 @@ Array [
       >
         <article
           className="small-movie-card catalog__movies-card"
-          onFocus={[Function]}
+          onPointerEnter={[Function]}
+          onPointerLeave={[Function]}
         >
-          <button
-            className="small-movie-card__play-btn"
-            onClick={[Function]}
-            type="button"
+          <video
+            height="175"
+            muted={true}
+            poster="img/fantastic.jpg"
+            width="280"
           >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic"
-              height="175"
-              src="img/fantastic.jpg"
-              width="280"
+            <source
+              src="https://download.trailer-480p.mp4"
+              type="video/mp4"
             />
-          </div>
+            <source
+              src="https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+              type="video/webm"
+            />
+            Fantastic
+          </video>
           <h3
             className="small-movie-card__title"
             onClick={[Function]}
@@ -411,25 +411,25 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
-          onFocus={[Function]}
+          onPointerEnter={[Function]}
+          onPointerLeave={[Function]}
         >
-          <button
-            className="small-movie-card__play-btn"
-            onClick={[Function]}
-            type="button"
+          <video
+            height="175"
+            muted={true}
+            poster="img/bohemian.jpg"
+            width="280"
           >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Bohemian"
-              height="175"
-              src="img/bohemian.jpg"
-              width="280"
+            <source
+              src="https://download.trailer-480p.mp4"
+              type="video/mp4"
             />
-          </div>
+            <source
+              src="https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+              type="video/webm"
+            />
+            Bohemian
+          </video>
           <h3
             className="small-movie-card__title"
             onClick={[Function]}
@@ -444,25 +444,25 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
-          onFocus={[Function]}
+          onPointerEnter={[Function]}
+          onPointerLeave={[Function]}
         >
-          <button
-            className="small-movie-card__play-btn"
-            onClick={[Function]}
-            type="button"
+          <video
+            height="175"
+            muted={true}
+            poster="img/macbeth.jpg"
+            width="280"
           >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Macbeth"
-              height="175"
-              src="img/macbeth.jpg"
-              width="280"
+            <source
+              src="https://download.trailer-480p.mp4"
+              type="video/mp4"
             />
-          </div>
+            <source
+              src="https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+              type="video/webm"
+            />
+            Macbeth
+          </video>
           <h3
             className="small-movie-card__title"
             onClick={[Function]}
@@ -477,25 +477,25 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
-          onFocus={[Function]}
+          onPointerEnter={[Function]}
+          onPointerLeave={[Function]}
         >
-          <button
-            className="small-movie-card__play-btn"
-            onClick={[Function]}
-            type="button"
+          <video
+            height="175"
+            muted={true}
+            poster="img/we-need-to.jpg"
+            width="280"
           >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="We need to"
-              height="175"
-              src="img/we-need-to.jpg"
-              width="280"
+            <source
+              src="https://download.trailer-480p.mp4"
+              type="video/mp4"
             />
-          </div>
+            <source
+              src="https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+              type="video/webm"
+            />
+            We need to
+          </video>
           <h3
             className="small-movie-card__title"
             onClick={[Function]}

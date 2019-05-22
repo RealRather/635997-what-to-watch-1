@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import MovieCard from './movie-card.jsx';
+import VideoPlayer from './video-player.jsx';
 
 const mock = {
   id: `22`,
@@ -12,15 +12,13 @@ const mock = {
   },
 };
 
-it(`Render MovieCard`, () => {
-  const clickHandler = jest.fn();
+it(`Render VideoPlayer`, () => {
   const tree = renderer
-    .create(<MovieCard
+    .create(<VideoPlayer
       movie={mock}
-      clickHandler={clickHandler}
-      focusHandler={clickHandler}
-      leaveHandler={clickHandler}
-    />, {
+      isVideoPlaying={false}
+    />,
+    {
       createNodeMock: (element) => element
     })
     .toJSON();

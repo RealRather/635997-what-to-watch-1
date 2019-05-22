@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render VideoPlayer 1`] = `
+<video
+  height="175"
+  muted={true}
+  poster="img/bohemian.jpg"
+  width="280"
+>
+  <source
+    src="https://download.trailer-480p.mp4"
+    type="video/mp4"
+  />
+  <source
+    src="https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+    type="video/webm"
+  />
+  Bohemian
+</video>
+`;
