@@ -2,9 +2,6 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import MovieCard from '../movie-card/movie-card.jsx';
 
-const TIME_DELAY = 1000;
-let timerId;
-
 class MoviesList extends PureComponent {
   constructor(props) {
     super(props);
@@ -19,14 +16,12 @@ class MoviesList extends PureComponent {
 
   render() {
     const {movies} = this.props;
-    const {focusMovieId} = this.state;
     return movies.map((it) => <MovieCard
       movie={it}
       key={it.id}
       clickHandler={this._movieClickHandler}
-      focusHandler={this._movieFocusHandler}
-      leaveHandler={this._movieLeaveHandler}
-      isVideoPlaying={it.id === focusMovieId}
+      focusHandler={() => this._movieFocusHandler(it.id)}
+      leaveHandler={() => this._movieLeaveHandler()}
     />);
   }
 
@@ -35,18 +30,14 @@ class MoviesList extends PureComponent {
   }
 
   _movieFocusHandler(id) {
-    timerId = setTimeout(() => {
-      this.setState({
-        focusMovieId: id,
-      });
-    },
-    TIME_DELAY);
+    this.setState({
+      focusMoviedId: id,
+    });
   }
 
   _movieLeaveHandler() {
-    clearTimeout(timerId);
     this.setState({
-      focusMovieId: null
+      focusMoviedId: null,
     });
   }
 }

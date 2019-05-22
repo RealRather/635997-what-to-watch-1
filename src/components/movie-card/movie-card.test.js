@@ -17,7 +17,6 @@ it(`Render MovieCard`, () => {
   const tree = renderer
     .create(<MovieCard
       movie={mock}
-      isVideoPlaying={false}
       clickHandler={clickHandler}
       focusHandler={clickHandler}
       leaveHandler={clickHandler}

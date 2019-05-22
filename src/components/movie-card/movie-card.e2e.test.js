@@ -18,7 +18,6 @@ it(`Simulate pointerenter event in MovieCard`, () =>{
   const handler = jest.fn();
   const movie = shallow(<MovieCard
     movie={mock}
-    isVideoPlaying={false}
     clickHandler={handler}
     focusHandler={handler}
     leaveHandler={handler}
