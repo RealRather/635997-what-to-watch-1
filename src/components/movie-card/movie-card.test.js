@@ -20,7 +20,9 @@ it(`Render MovieCard`, () => {
       clickHandler={clickHandler}
       focusHandler={clickHandler}
       leaveHandler={clickHandler}
-    />)
+    />, {
+      createNodeMock: (element) => element
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();

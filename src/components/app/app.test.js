@@ -45,7 +45,9 @@ it(`Render App`, () => {
   const tree = renderer
     .create(<App
       moviesCards={mocks}
-    />)
+    />, {
+      createNodeMock: (element) => element
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();

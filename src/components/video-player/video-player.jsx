@@ -17,17 +17,19 @@ class VideoPlayer extends PureComponent {
   }
 
   render() {
-    const {movie} = this.props;
+    // eslint-disable-next-line react/prop-types
+    const {movie, muted} = this.props;
+
     return <React.Fragment>
       <video
         width="280"
         height="175"
-        poster={`${movie.src}`}
-        muted={true}
+        poster={movie.src}
+        muted={muted}
         ref={this._videoRef}
       >
         {this._getSourceTags(movie.preview)}
-        {`${movie.name}`}
+        {movie.name}
       </video>
     </React.Fragment>;
   }
@@ -79,6 +81,10 @@ class VideoPlayer extends PureComponent {
     return sourceTypes;
   }
 }
+
+VideoPlayer.defaultProps = {
+  muted: true
+};
 
 VideoPlayer.propTypes = {
   movie: PropTypes.shape({

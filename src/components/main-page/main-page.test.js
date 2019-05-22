@@ -45,7 +45,10 @@ it(`Render MainPage`, () => {
   const tree = renderer
     .create(<MainPage
       moviesCards={mocks}
-    />)
+    />,
+    {
+      createNodeMock: (element) => element
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();

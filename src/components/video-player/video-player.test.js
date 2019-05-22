@@ -17,7 +17,10 @@ it(`Render VideoPlayer`, () => {
     .create(<VideoPlayer
       movie={mock}
       isVideoPlaying={false}
-    />)
+    />,
+    {
+      createNodeMock: (element) => element
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();

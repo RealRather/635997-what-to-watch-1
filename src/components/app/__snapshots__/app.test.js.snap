@@ -378,7 +378,8 @@ Array [
       >
         <article
           className="small-movie-card catalog__movies-card"
-          onFocus={[Function]}
+          onPointerEnter={[Function]}
+          onPointerLeave={[Function]}
         >
           <video
             height="175"
@@ -410,7 +411,8 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
-          onFocus={[Function]}
+          onPointerEnter={[Function]}
+          onPointerLeave={[Function]}
         >
           <video
             height="175"
@@ -442,7 +444,8 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
-          onFocus={[Function]}
+          onPointerEnter={[Function]}
+          onPointerLeave={[Function]}
         >
           <video
             height="175"
@@ -474,7 +477,8 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
-          onFocus={[Function]}
+          onPointerEnter={[Function]}
+          onPointerLeave={[Function]}
         >
           <video
             height="175"

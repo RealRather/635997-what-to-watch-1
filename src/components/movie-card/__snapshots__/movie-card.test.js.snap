@@ -3,7 +3,8 @@
 exports[`Render MovieCard 1`] = `
 <article
   className="small-movie-card catalog__movies-card"
-  onFocus={[Function]}
+  onPointerEnter={[Function]}
+  onPointerLeave={[Function]}
 >
   <video
     height="175"
