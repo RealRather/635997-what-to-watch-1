@@ -20,7 +20,7 @@ class MovieCard extends PureComponent {
       clickHandler,
     } = this.props;
 
-    return <article className="small-movie-card catalog__movies-card" onPointerEnter={() => this._movieFocusHandler()} onMouseLeave={() => this._movieLeaveHandler()}>
+    return <article className="small-movie-card catalog__movies-card" onPointerEnter={() => this._movieFocusHandler()} onPointerLeave={() => this._movieLeaveHandler()}>
       <VideoPlayer movie={movie} isVideoPlaying={this.state.isVideoPlaying}/>
       <h3 className="small-movie-card__title" onClick={() => clickHandler(movie.id)}>
         <a className="small-movie-card__link" href="movie-page.html">{movie.name}</a>
