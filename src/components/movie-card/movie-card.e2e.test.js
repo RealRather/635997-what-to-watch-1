@@ -22,7 +22,7 @@ it(`Simulate pointerenter event in MovieCard`, () =>{
     focusHandler={handler}
     leaveHandler={handler}
   />);
-  const cardTitle = movie.find(`.small-movie-card`);
-  cardTitle.simulate(`pointerenter`, {preventDefault() {}});
+  const card = movie.find(`.small-movie-card`);
+  card.simulate(`pointerenter`, {preventDefault() {}});
   expect(handler).toHaveBeenCalledTimes(1);
 });
