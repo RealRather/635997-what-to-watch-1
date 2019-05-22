@@ -14,7 +14,7 @@ const mock = {
   },
 };
 
-it(`Simulate click event in MovieCard`, () =>{
+it(`Simulate pointerenter event in MovieCard`, () =>{
   const handler = jest.fn();
   const movie = shallow(<MovieCard
     movie={mock}
@@ -24,6 +24,6 @@ it(`Simulate click event in MovieCard`, () =>{
     leaveHandler={handler}
   />);
   const cardTitle = movie.find(`.small-movie-card`);
-  cardTitle.simulate(`pointerEnter`, {preventDefault() {}});
+  cardTitle.simulate(`pointerenter`, {preventDefault() {}});
   expect(handler).toHaveBeenCalledTimes(1);
 });

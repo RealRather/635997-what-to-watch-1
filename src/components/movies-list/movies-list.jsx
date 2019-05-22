@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MovieCard from '../movie-card/movie-card.jsx';
 
 const TIME_DELAY = 1000;
-let timerId = ``;
+let timerId;
 
 class MoviesList extends PureComponent {
   constructor(props) {
@@ -23,10 +23,10 @@ class MoviesList extends PureComponent {
     return movies.map((it) => <MovieCard
       movie={it}
       key={it.id}
-      isVideoPlaying={it.id === focusMovieId}
       clickHandler={this._movieClickHandler}
       focusHandler={this._movieFocusHandler}
       leaveHandler={this._movieLeaveHandler}
+      isVideoPlaying={it.id === focusMovieId}
     />);
   }
 
@@ -37,7 +37,7 @@ class MoviesList extends PureComponent {
   _movieFocusHandler(id) {
     timerId = setTimeout(() => {
       this.setState({
-        focusMovieId: id
+        focusMovieId: id,
       });
     },
     TIME_DELAY);

@@ -18,8 +18,6 @@ class VideoPlayer extends PureComponent {
 
   render() {
     const {movie} = this.props;
-    const {isLoading} = this.state;
-
     return <React.Fragment>
       <video
         width="280"
@@ -27,7 +25,6 @@ class VideoPlayer extends PureComponent {
         poster={`${movie.src}`}
         muted={true}
         ref={this._videoRef}
-        disabled={isLoading}
       >
         {this._getSourceTags(movie.preview)}
         {`${movie.name}`}
@@ -61,7 +58,7 @@ class VideoPlayer extends PureComponent {
     if (this.props.isVideoPlaying) {
       preview.play();
     } else {
-      preview.pause();
+      preview.load();
     }
   }
 
