@@ -97,7 +97,7 @@ const MainPage = ((props) => {
         <section className="catalog">
           <h2 className="catalog__title visually-hidden">Catalog</h2>
           <ul className="catalog__genres-list">
-            <GenresList genres={[`All genres`, `Comedies`, `Crime`, `Documentary`, `Dramas`, `Horror`]}/>
+            <GenresList/>
           </ul>
           <div className="catalog__movies-list">
             <MoviesList movies={moviesCards}/>

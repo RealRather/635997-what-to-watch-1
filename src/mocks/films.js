@@ -27,7 +27,7 @@ const films = [
       mp4: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
       webm: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
     },
-    genre: `Documentary`
+    genre: `Crime`
   },
   {
     id: `4`,
