@@ -3,6 +3,7 @@ import films from '../mocks/films.js';
 const DEFAULT_GENRE_TYPE = `All genres`;
 
 const getAllGenres = (movies) => [DEFAULT_GENRE_TYPE, ...new Set(movies.map((movie) => movie.genre))];
+const filterMoviesByGenre = (movies, genre) => movies.map((movie) => movie.genre === genre);
 
 const initialState = {
   moviesFilterByGenre: films,
@@ -16,9 +17,9 @@ const ActionCreator = {
     payload: genre
   }),
 
-  filterMoviesByGenre: (filterMovies) => ({
+  filterMoviesByGenre: (filteredMovies) => ({
     type: `FILTER_MOVIES_BY_GENRE`,
-    payload: filterMovies
+    payload: filterMoviesByGenre(filteredMovies)
   })
 };
 
