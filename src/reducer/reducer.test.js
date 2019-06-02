@@ -25,7 +25,7 @@ it(`Selecting genre type`, () => {
 it(`Filtering movies by genre`, () => {
   expect(reducer(initialState, {
     type: `FILTER_MOVIES_BY_GENRE`,
-    payload: `Dramas`
+    payload: filterMoviesByGenre(`Dramas`)
   })).toEqual({
     moviesFilterByGenre: filterMoviesByGenre(`Dramas`),
     genreType: initialState.genreType,
