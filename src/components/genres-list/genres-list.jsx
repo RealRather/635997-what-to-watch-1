@@ -36,7 +36,10 @@ const mapStateToProps = (state, ownProps) => Object.assign({},
     });
 
 const mapDispatchToProps = (dispatch) => ({
-  onGenreLinkClick: (genre) => dispatch(ActionCreator.getGenreType(genre)),
+  onGenreLinkClick: (genre) => {
+    dispatch(ActionCreator.getGenreType(genre));
+    dispatch(ActionCreator.filterMoviesByGenre(genre));
+  },
 });
 
 export {GenresList};

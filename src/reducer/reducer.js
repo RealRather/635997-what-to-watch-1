@@ -1,7 +1,8 @@
 import films from '../mocks/films.js';
 
 const DEFAULT_GENRE_TYPE = `All genres`;
-const filterMoviesByGenre = (movies, genre) => movies.map((movie) => movie.genre === genre);
+
+const filterMoviesByGenre = (genre) => films.filter((film) => film.genre === genre);
 
 export const getAllGenres = (movies) => [DEFAULT_GENRE_TYPE, ...new Set(movies.map((movie) => movie.genre))];
 
@@ -17,9 +18,9 @@ const ActionCreator = {
     payload: genre
   }),
 
-  filterMoviesByGenre: (defaultFilms, genreType) => ({
+  filterMoviesByGenre: (genreType) => ({
     type: `FILTER_MOVIES_BY_GENRE`,
-    payload: filterMoviesByGenre(defaultFilms, genreType)
+    payload: filterMoviesByGenre(genreType)
   })
 };
 
@@ -31,7 +32,7 @@ const reducer = (state = initialState, action = {}) => {
       });
     case `FILTER_MOVIES_BY_GENRE`:
       return Object.assign({}, state, {
-        moviesFilterByGenre: action.payload
+        moviesFilterByGenre: action.payload,
       });
     default:
       return state;
