@@ -10,6 +10,7 @@ const mock = {
     mp4: `https://download.trailer-480p.mp4`,
     webm: `https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
+  genre: `Dramas`,
 };
 
 it(`Render MovieCard`, () => {

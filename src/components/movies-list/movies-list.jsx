@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import MovieCard from '../movie-card/movie-card.jsx';
 
 class MoviesList extends PureComponent {
@@ -51,7 +52,16 @@ MoviesList.propTypes = {
       mp4: PropTypes.string.isRequired,
       webm: PropTypes.string.isRequired
     }),
+    genre: PropTypes.string.isRequired,
   }))
 };
 
-export default MoviesList;
+const mapStateToProps = (state, ownProps) => Object.assign({},
+    ownProps, {
+      movies: state.moviesFilterByGenre
+    });
+
+const mapDispatchToProps = () => ({});
+
+export {MoviesList};
+export default connect(mapStateToProps, mapDispatchToProps)(MoviesList);

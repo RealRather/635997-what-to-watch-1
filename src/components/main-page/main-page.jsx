@@ -1,11 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import MoviesList from '../movies-list/movies-list.jsx';
 import GenresList from '../genres-list/genres-list.jsx';
 
-const MainPage = ((props) => {
-  const {moviesCards} = props;
-
+const MainPage = (() => {
   return (
     <React.Fragment>
       <div className="visually-hidden">
@@ -100,7 +97,7 @@ const MainPage = ((props) => {
             <GenresList/>
           </ul>
           <div className="catalog__movies-list">
-            <MoviesList movies={moviesCards}/>
+            <MoviesList/>
           </div>
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -125,17 +122,4 @@ const MainPage = ((props) => {
   );
 });
 
-MainPage.propTypes = {
-  moviesCards: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
-    preview: PropTypes.shape({
-      mp4: PropTypes.string.isRequired,
-      webm: PropTypes.string.isRequired
-    }),
-  }))
-};
-
-export default MainPage;
-
+export {MainPage};

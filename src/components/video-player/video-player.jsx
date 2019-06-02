@@ -95,6 +95,7 @@ VideoPlayer.propTypes = {
       mp4: PropTypes.string.isRequired,
       webm: PropTypes.string.isRequired
     }),
+    genre: PropTypes.string.isRequired
   }),
   isVideoPlaying: PropTypes.bool.isRequired
 };

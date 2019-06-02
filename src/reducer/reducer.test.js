@@ -1,4 +1,6 @@
-const films = [
+import {reducer, getAllGenres} from './reducer.js';
+
+const mock = [
   {
     id: `1`,
     name: `Fantastic Beasts: The Crimes of Grindelwald`,
@@ -29,26 +31,31 @@ const films = [
     },
     genre: `Crime`,
   },
-  {
-    id: `4`,
-    name: `We need to talk about Kevin`,
-    src: `img/we-need-to-talk-about-kevin.jpg`,
-    preview: {
-      mp4: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-      webm: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
-    },
-    genre: `Comedies`,
-  },
-  {
-    id: `5`,
-    name: `Johnny English`,
-    src: `img/johnny-english.jpg`,
-    preview: {
-      mp4: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-      webm: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
-    },
-    genre: `Comedies`,
-  }
 ];
 
-export default films;
+const initialState = {
+  moviesFilterByGenre: mock,
+  genreType: `All genres`,
+  genres: getAllGenres(mock),
+};
+
+describe(`Reducer render - test`, () => {
+  it(`Default render render`, () => {
+    expect(reducer(initialState, {})).toEqual({
+      moviesFilterByGenre: mock,
+      genreType: `All genres`,
+      genres: [`All genres`, `Kids & Family`, `Dramas`, `Crime`],
+    });
+  });
+});
+
+it(`Selecting genre type`, () => {
+  expect(reducer(initialState, {
+    type: `GET_GENRE_TYPE`,
+    payload: `Crime`
+  })).toEqual({
+    genreType: `Crime`,
+    moviesFilterByGenre: mock,
+    genres: [`All genres`, `Kids & Family`, `Dramas`, `Crime`]
+  });
+});

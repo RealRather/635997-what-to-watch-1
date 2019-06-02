@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {ActionCreator} from "../../reducer/reducer";
+import {ActionCreator} from '../../reducer/reducer.js';
 
 class GenresList extends PureComponent {
   render() {
