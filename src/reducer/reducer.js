@@ -17,9 +17,9 @@ const ActionCreator = {
     payload: genre
   }),
 
-  filterMoviesByGenre: (filteredMovies) => ({
+  filterMoviesByGenre: (defaultFilms, genreType) => ({
     type: `FILTER_MOVIES_BY_GENRE`,
-    payload: filterMoviesByGenre(filteredMovies)
+    payload: filterMoviesByGenre(defaultFilms, genreType)
   })
 };
 
