@@ -2,7 +2,11 @@ import films from '../mocks/films.js';
 
 const DEFAULT_GENRE_TYPE = `All genres`;
 
-const filterMoviesByGenre = (genre) => films.filter((film) => film.genre === genre);
+export const filterMoviesByGenre = (genre) => {
+  return (genre === DEFAULT_GENRE_TYPE) ?
+    films :
+    films.filter((film) => film.genre === genre);
+};
 
 export const getAllGenres = (movies) => [DEFAULT_GENRE_TYPE, ...new Set(movies.map((movie) => movie.genre))];
 
