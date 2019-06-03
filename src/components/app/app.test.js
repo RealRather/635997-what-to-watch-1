@@ -7,9 +7,8 @@ import App from './app.jsx';
 
 describe(`App render - test`, () => {
   it(`Render App`, () => {
-    let store;
     const mockStore = configureStore();
-    store = mockStore(initialState);
+    const store = mockStore(initialState);
     const tree = renderer
       .create(<Provider store={store}>
         <App/>

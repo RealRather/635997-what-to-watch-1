@@ -9,9 +9,8 @@ import App from './app.jsx';
 Enzyme.configure({adapter: new Adapter()});
 
 it(`Simulate connect store in App`, () =>{
-  let store;
   const mockStore = configureStore();
-  store = mockStore(initialState);
+  const store = mockStore(initialState);
   const wrapper = shallow(
       <Provider store={store}>
         <App/>
