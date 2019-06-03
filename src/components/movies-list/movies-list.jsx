@@ -19,7 +19,7 @@ class MoviesList extends PureComponent {
     const {movies} = this.props;
     return movies.map((it) => <MovieCard
       movie={it}
-      key={it.id}
+      key={`${it.id}-movie-card`}
       clickHandler={this._movieClickHandler}
       focusHandler={() => this._movieFocusHandler(it.id)}
       leaveHandler={() => this._movieLeaveHandler()}
