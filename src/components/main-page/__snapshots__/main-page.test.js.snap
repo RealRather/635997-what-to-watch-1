@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render MainPage 1`] = `
+exports[`MainPage render - test Render MainPage 1`] = `
 Array [
   <div
     className="visually-hidden"
@@ -272,12 +272,14 @@ Array [
       <ul
         className="catalog__genres-list"
       >
+         
         <li
           className="catalog__genres-item catalog__genres-item--active"
         >
           <a
             className="catalog__genres-link"
             href="#"
+            onClick={[Function]}
           >
             All genres
           </a>
@@ -288,56 +290,7 @@ Array [
           <a
             className="catalog__genres-link"
             href="#"
-          >
-            Comedies
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Crime
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Documentary
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Dramas
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Horror
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
+            onClick={[Function]}
           >
             Kids & Family
           </a>
@@ -348,8 +301,9 @@ Array [
           <a
             className="catalog__genres-link"
             href="#"
+            onClick={[Function]}
           >
-            Romance
+            Dramas
           </a>
         </li>
         <li
@@ -358,8 +312,9 @@ Array [
           <a
             className="catalog__genres-link"
             href="#"
+            onClick={[Function]}
           >
-            Sci-Fi
+            Crime
           </a>
         </li>
         <li
@@ -368,8 +323,9 @@ Array [
           <a
             className="catalog__genres-link"
             href="#"
+            onClick={[Function]}
           >
-            Thrillers
+            Comedies
           </a>
         </li>
       </ul>
@@ -384,18 +340,18 @@ Array [
           <video
             height="175"
             muted={true}
-            poster="img/fantastic.jpg"
+            poster="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
             width="280"
           >
             <source
-              src="https://download.trailer-480p.mp4"
+              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
               type="video/mp4"
             />
             <source
-              src="https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
               type="video/webm"
             />
-            Fantastic
+            Fantastic Beasts: The Crimes of Grindelwald
           </video>
           <h3
             className="small-movie-card__title"
@@ -405,7 +361,7 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Fantastic
+              Fantastic Beasts: The Crimes of Grindelwald
             </a>
           </h3>
         </article>
@@ -417,18 +373,18 @@ Array [
           <video
             height="175"
             muted={true}
-            poster="img/bohemian.jpg"
+            poster="img/bohemian-rhapsody.jpg"
             width="280"
           >
             <source
-              src="https://download.trailer-480p.mp4"
+              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
               type="video/mp4"
             />
             <source
-              src="https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
               type="video/webm"
             />
-            Bohemian
+            Bohemian Rhapsody
           </video>
           <h3
             className="small-movie-card__title"
@@ -438,7 +394,7 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Bohemian
+              Bohemian Rhapsody
             </a>
           </h3>
         </article>
@@ -454,11 +410,11 @@ Array [
             width="280"
           >
             <source
-              src="https://download.trailer-480p.mp4"
+              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
               type="video/mp4"
             />
             <source
-              src="https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
               type="video/webm"
             />
             Macbeth
@@ -483,18 +439,18 @@ Array [
           <video
             height="175"
             muted={true}
-            poster="img/we-need-to.jpg"
+            poster="img/we-need-to-talk-about-kevin.jpg"
             width="280"
           >
             <source
-              src="https://download.trailer-480p.mp4"
+              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
               type="video/mp4"
             />
             <source
-              src="https://Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
               type="video/webm"
             />
-            We need to
+            We need to talk about Kevin
           </video>
           <h3
             className="small-movie-card__title"
@@ -504,7 +460,40 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              We need to
+              We need to talk about Kevin
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+          onPointerEnter={[Function]}
+          onPointerLeave={[Function]}
+        >
+          <video
+            height="175"
+            muted={true}
+            poster="img/johnny-english.jpg"
+            width="280"
+          >
+            <source
+              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+              type="video/webm"
+            />
+            Johnny English
+          </video>
+          <h3
+            className="small-movie-card__title"
+            onClick={[Function]}
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+            >
+              Johnny English
             </a>
           </h3>
         </article>

@@ -1,24 +1,7 @@
 import React from 'react';
 import MainPage from '../main-page/main-page.jsx';
-import PropTypes from 'prop-types';
 
-const App = (props) => {
-  const {moviesCards} = props;
-  return <MainPage
-    moviesCards= {moviesCards}
-  />;
+const App = () => {
+  return <MainPage/>;
 };
-
-App.propTypes = {
-  moviesCards: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
-    preview: PropTypes.shape({
-      mp4: PropTypes.string.isRequired,
-      webm: PropTypes.string.isRequired
-    }),
-  }))
-};
-
 export default App;

@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
 import App from './components/app/app.jsx';
-import films from './mocks/films.js';
+import {reducer} from './reducer/reducer.js';
 
-const init = (movies) => {
-  ReactDOM.render(
-      <App
-        moviesCards= {movies}
-      />,
-      document.querySelector(`#root`)
-  );
-};
+const store = createStore(
+    reducer
+);
 
-init(films);
+ReactDOM.render(
+    <Provider store={store}>
+      <App/>
+    </Provider>,
+    document.querySelector(`#root`)
+);
