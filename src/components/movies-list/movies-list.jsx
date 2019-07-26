@@ -32,13 +32,13 @@ class MoviesList extends PureComponent {
 
   _movieFocusHandler(id) {
     this.setState({
-      focusMoviedId: id,
+      focusMovieId: id,
     });
   }
 
   _movieLeaveHandler() {
     this.setState({
-      focusMoviedId: null,
+      focusMovieId: null,
     });
   }
 }

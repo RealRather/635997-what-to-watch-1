@@ -1,8 +1,12 @@
 import React from 'react';
+import withActiveItem from '../../hocs/with-active-item.jsx';
 import MoviesList from '../movies-list/movies-list.jsx';
 import GenresList from '../genres-list/genres-list.jsx';
 
 const MainPage = (() => {
+  const ActiveItemGenresList = withActiveItem(GenresList);
+  const ActiveItemMoviesList = withActiveItem(MoviesList);
+
   return (
     <React.Fragment>
       <div className="visually-hidden">
@@ -94,10 +98,10 @@ const MainPage = (() => {
         <section className="catalog">
           <h2 className="catalog__title visually-hidden">Catalog</h2>
           <ul className="catalog__genres-list">
-            <GenresList/>
+            <ActiveItemGenresList/>
           </ul>
           <div className="catalog__movies-list">
-            <MoviesList/>
+            <ActiveItemMoviesList/>
           </div>
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
